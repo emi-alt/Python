@@ -1,1 +1,6 @@
 print("Hello world!")
+print("Welcome to the world of python programming.")
+print(99.9)
+print("It is one of the top ", 10, " programming languages." )
+print("Let's start coding!", end=" ")
+print("Start here: https://www.python.org/")
