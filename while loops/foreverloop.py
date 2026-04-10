@@ -1,3 +1,5 @@
-# i = 0
-# while i<=0:
-#     print("This is a forever loop")
+i = 0
+a = 0
+while i<=0:
+    a += 1
+    print(a," This is a forever loop")
