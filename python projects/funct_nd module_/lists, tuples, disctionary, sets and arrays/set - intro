@@ -1,0 +1,16 @@
+set1 = {1, 3, 2}
+print(set1)
+
+set1 = {1.9, True, "bye", (2,4,6)}
+print(set1)
+
+set1 = {1, 2, 3, 4, 3, 6}
+print(set1)
+
+set1 = set([1, 2, 3, 4])
+print(set1, "\n")
+
+set1 = {2,3,4,5,6}
+print(f"original set: {set1}")
+set1.pop()
+print(f"after removing a number {set1}")
