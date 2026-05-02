@@ -3,20 +3,32 @@ import string
 all_letters = list(string.ascii_letters)
 print("Welcome to random password creater.\nWhere we create a 8 characters long password.")
 passw = " "
-i = " "
-j = 0
-""" for i in range(4):
-    i = random.choice(all_letters)
-    passw.append[i]
+for i in range(4):
+    passw += random.choice(all_letters)
 for j in range(4):
-    j = random.randint(0, 100)
-    passw.append[j]
-print(passw) """
-p = " "
-y = 0
-for i in range(8):
-    p = random.choice(all_letters)
-    i += 1
-    if i > 4:
-        y = random.randint(0, 100)
-print(p,y)
+    passw += str(random.randint(0, 10))
+print(passw)
+
+""" import random
+
+import string
+
+all_letters = list(string.ascii_letters)
+
+print("Welcome to random password creator.\nWhere we create an 8 character long password.")
+
+password = ""
+
+# Add 4 random letters
+
+for _ in range(4):
+
+  password += random.choice(all_letters)
+
+# Add 4 random digits
+
+for _ in range(4):
+
+  password += str(random.randint(0, 9))
+
+print("Your password is:", password) """
