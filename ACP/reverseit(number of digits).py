@@ -1,4 +1,3 @@
-import 
 number = input("Enter a number to count it's digits: ")
 count = 0
 for i in number:
