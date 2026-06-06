@@ -41,8 +41,8 @@ while running:
             running = False
         if not won:
             keys = pygame.key.get_pressed()
-            x_change = (keys[pygame.K_RIGHT] - keys[pygame.K_LEFT]*speed)
-            y_change = (keys[pygame.K_DOWN] - keys[pygame.K_UP]*speed)
+            x_change = (keys[pygame.K_RIGHT] - keys[pygame.K_LEFT])*speed
+            y_change = (keys[pygame.K_DOWN] - keys[pygame.K_UP])*speed
             sprite1.move(x_change, y_change)
             if sprite1.rect.colliderect(sprite2.rect):
                all_sprites.remove(sprite2)
@@ -55,4 +55,4 @@ while running:
             screen.blit(win_text, ((screen_w - win_text.get_width())//2, (screen_h - win_text.get_height())//2))
         pygame.display.flip()
         clock.tick(90)
-    pygame.quit()
+pygame.quit()
