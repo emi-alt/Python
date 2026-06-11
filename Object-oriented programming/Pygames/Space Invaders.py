@@ -5,7 +5,7 @@ import pygame
 SCREEN_W = 800
 SCREEN_H = 400
 PLAYER_START_X = 370
-PLAYER_START_Y = 380
+PLAYER_START_Y = 300
 ENEMY_START_Y_MIN = 50
 ENEMY_START_Y_MAX = 150
 ENEMY_SPEED_X = 4
@@ -39,7 +39,7 @@ for i in range(total_enemies):
     enemyX_change.append(ENEMY_SPEED_X)
     enemyY_change.append(ENEMY_SPEED_Y)
 
-bulletImg = pygame.image.load('C:/Users/hp/Desktop/Python/fire-bullet.png')
+bulletImg = pygame.image.load('C:/Users/hp/Desktop/Python/bullet.png')
 bulletX = 0
 bulletY = PLAYER_START_Y
 bullet_State = "ready"
