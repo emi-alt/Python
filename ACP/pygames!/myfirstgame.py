@@ -1,4 +1,4 @@
-import pygame
+import pygame # type: ignore
 pygame.init()
 w = 500
 h = 500
