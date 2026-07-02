@@ -1,4 +1,4 @@
-import pygame # type: ignore
+import pygame
 W = 640
 H = 480
 window = pygame.set_mode((W, H))
