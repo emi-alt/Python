@@ -1,0 +1,27 @@
+from tkinter import *
+screen = Tk()
+screen.title('Product of numbers')
+screen.geometry('700x700')
+des = Label(text='This is an application made to multiply two numbers. Enter the numbers in the two given text boxes and click "multiply".', anchor='n')
+num1 = Label(text='Number 1:')
+num2 = Label(text='Number 2:')
+etr1 = Entry()
+etr2 = Entry()
+info = Label(text='reload before multiplying again.')
+text = Text(height=3,width=60)
+def mul():
+    n1 = float(etr1.get())
+    n2 = float(etr2.get())
+    product = n1*n2
+    text.insert(END, product)
+btn = Button(text='Multiply', command=mul)
+
+des.place(x=10, y=100)
+num1.place(x=75, y=203)
+num2.place(x=225, y=203)
+etr1.place(x=45, y=266)
+etr2.place(x=205, y=266)
+btn.place(x=150, y=300)
+text.place(x=45, y=350)
+info.place(x=40, y=450)
+screen.mainloop()
