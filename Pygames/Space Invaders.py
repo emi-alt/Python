@@ -3,9 +3,9 @@ import random
 import pygame
 
 SCREEN_W = 800
-SCREEN_H = 400
+SCREEN_H = 500
 PLAYER_START_X = 370
-PLAYER_START_Y = 300
+PLAYER_START_Y = 310
 ENEMY_START_Y_MIN = 50
 ENEMY_START_Y_MAX = 150
 ENEMY_SPEED_X = 4
@@ -20,11 +20,10 @@ pygame.display.set_caption("Space Invaders")
 icon = pygame.image.load('C:/Users/hp/Desktop/Python/moon-icon.jpg')
 pygame.display.set_icon(icon)
 
-playerImg = pygame.image.load('C:/Users/hp/Desktop/Python/rocket-player.png')
+playerImg = pygame.transform.scale(pygame.image.load('C:/Users/hp/Desktop/Python/rocket-player.png'), (200,200))
 playerX = PLAYER_START_X
 playerY = PLAYER_START_Y
 playerX_change = 0
-
 enemyImg = []
 enemyX = []
 enemyY = []
@@ -39,7 +38,7 @@ for i in range(total_enemies):
     enemyX_change.append(ENEMY_SPEED_X)
     enemyY_change.append(ENEMY_SPEED_Y)
 
-bulletImg = pygame.image.load('C:/Users/hp/Desktop/Python/bullet.png')
+bulletImg = pygame.transform.scale(pygame.image.load('C:/Users/hp/Desktop/Python/bullet.png'),(30,50))
 bulletX = 0
 bulletY = PLAYER_START_Y
 bullet_State = "ready"
@@ -83,7 +82,7 @@ while running:
             if event.key == pygame.K_RIGHT:
                 playerX_change = 5
             if event.key == pygame.K_SPACE and bullet_State == "ready":
-                bulletX = playerX
+                bulletX = playerX + 70
                 fire_bullet(bulletX, bulletY)
         if event.type == pygame.KEYUP and event.key in [pygame.K_LEFT, pygame.K_RIGHT]:
             playerX_change = 0
@@ -92,7 +91,7 @@ while running:
         playerX = max(0, min(playerX, SCREEN_W - 64))
         # loop for enemies
         for i in range(total_enemies):
-            if enemyY[i] > 340 :
+            if enemyY[i] > 300 :
                 for j in range(total_enemies):
                     enemyY[j] = 2000
                 game_over_text()
