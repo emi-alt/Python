@@ -54,10 +54,10 @@ keypad_frame = Frame(
     borderwidth = 2,
     bg = "#d8721e"
 )
-keys = np.array([["1","2","3"],
+keys = [["1","2","3"],
              ["4","5","6"],
              ["7","8","9"],
-             ["#","0","*"]  ])
+             ["#","0","*"]]
 
 for i in range(4):
     keypad_frame.rowconfigure(i, weight=1, minsize=30)
@@ -65,35 +65,22 @@ for i in range(4):
     for j in range(3):
         keypad_frame.columnconfigure(j, weight=1, minsize=50)
 
-        cell = Frame(
+        number_label = Label(
             master=keypad_frame,
+            text=keys[i][j],
+            bg="#f5acac",
             relief=RAISED,
-            borderwidth=1
+            borderwidth=2
         )
  
-        cell.grid(
+        number_label.grid(
             row=i,
             column=j,
+            padx=4,
+            pady=4,
             sticky="nsew"
         )
-        
-        number_label = Label(
-            master=cell,
-            text=keys[i][j],
-            bg="#f5acac"
-        )
- 
-        number_label.pack(
-            padx=8,
-            pady=8
-        )
-        confirm_button = Button(
-                    master=screen,
-                    command = button_pressed,
-                    text="Set ATM PIN",
-                    bg="#F08888",
-                    fg="#6D1313"
-        )
+
      
 details_frame.place(x=20, y=10)
  
